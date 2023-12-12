@@ -125,7 +125,7 @@ function generateTodos() {
     <button class="cursor-pointer delete-btn select-none w-icon">
       <img src="imgs/delete.svg" alt="delete" />
     </button>
-    <button class="cursor-pointer select-none" >
+    <button class="cursor-pointer select-none rounded-full" >
       <div
       class="${
         item.done ? `bg-greenish` : `bg-transparent`

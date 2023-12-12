@@ -808,6 +808,10 @@ video {
 }
 
 @layer {
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .specialInput {
     width: 70% !important;
     position: absolute;

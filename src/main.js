@@ -93,6 +93,7 @@ submit_btn.addEventListener("click", (e) => {
 });
 
 function generateTodos() {
+  // ! შეცვალე today-ს ვალიუ
   const today = new Date().getDay();
   const thisMonth = new Date().getMonth();
   todo_div.innerHTML =
@@ -104,7 +105,7 @@ function generateTodos() {
             const yesterday =
               today - 1 === item.day && thisMonth === item.month;
             return `          
-  <div id="${item.id}" class="flex justify-between gap-icons">
+  <div id="${item.id}" class="flex justify-between gap-icons max-sm:gap-[10px]">
   <div>
     <h4 class="${
       item.done ? `line-through ` : ``
@@ -120,7 +121,7 @@ function generateTodos() {
               item.minutes < 10 ? `0${item.minutes}` : item.minutes
             } </h5>
   </div>
-  <div class="flex gap-icons items-center">
+  <div class="flex gap-icons items-center max-sm:gap-[8px]">
     <button class="cursor-pointer delete-btn select-none w-icon">
       <img src="imgs/delete.svg" alt="delete" />
     </button>

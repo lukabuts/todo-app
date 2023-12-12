@@ -56,6 +56,10 @@ module.exports = {
       backgroundImage: {
         flowers: "url(imgs/background.svg)",
       },
+      // Screens
+      screens: {
+        sm: "400px",
+      },
     },
   },
   plugins: [],

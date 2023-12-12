@@ -6,10 +6,11 @@ function updateTime() {
   const day = new Date().getDay();
   const hours = new Date().getHours();
   const minutes = new Date().getMinutes();
-  time_div.innerHTML = `<h4 class="text-subtitle font-russo-one"> 
+  time_div.innerHTML = `
+  <h4 class="text-subtitle font-russo-one max-sm:text-[16px]"> 
   ${dayNames[day - 1]} ${date} ${monthNames[month - 1]}
   </h4>
-    <h2 class="text-title font-russo-one ">${
+    <h2 class="text-title font-russo-one max-sm:text-[38px]">${
       hours < 10 ? `0${hours}` : `${hours}`
     }:${minutes < 10 ? `0${minutes}` : `${minutes}`}</h2>`;
 }

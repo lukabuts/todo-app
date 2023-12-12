@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Russo+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  .specialInput {
+    width: 70% !important;
+    position: absolute;
+    left: 45px;
+    animation: emptyInput 0.1s infinite ease-in-out;
+  }
+  @keyframes emptyInput {
+    0% {
+      left: 46px;
+      transform: rotate(0deg);
+    }
+    50% {
+      left: 44px;
+      transform: rotate(0.5deg);
+    }
+    100% {
+      left: 46px;
+      transform: rotate(0deg);
+    }
+  }
+}

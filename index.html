@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do app</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="flex justify-center p-[20px] bg-slate-600">
+    <div class="w-[100%] max-w-container rounded-[10px] overflow-hidden">
+      <!-- ! flower -->
+      <div
+        class="bg-flowers w-[100%] h-title bg-center flex items-end justify-end"
+      >
+        <div
+          id="time"
+          class="flex items-end flex-col m-container-padding text-white select-none"
+        ></div>
+      </div>
+      <!-- ! main -->
+      <div class="bg-white p-container-padding">
+        <!-- ! Form -->
+        <form class="flex gap-[10px] mb-input-todos">
+          <div
+            class="flex-1 flex items-center gap-2 h-[49px] p-[12px] bg-input rounded-[5px] relative"
+          >
+            <div
+              class="bg-greenish w-icon h-icon flex items-center justify-center rounded-full select-none shrink-0"
+            >
+              <img src="imgs/done.svg" />
+            </div>
+            <!-- ! Special Input -->
+            <input
+              type="text"
+              id="input"
+              placeholder="Note"
+              class="text-gray bg-transparent w-[100%] focus-visible:outline-none"
+            />
+          </div>
+          <input
+            type="submit"
+            id="submit-btn"
+            value="+"
+            class="w-btn bg-greenish rounded-[5px] cursor-pointer text-white text-[30px] shrink-0"
+          />
+        </form>
+        <!-- ! todo -->
+        <div id="todos" class="flex flex-col gap-main"></div>
+      </div>
+    </div>
+    <script src="src/main.js"></script>
+    <script src="src/time.js"></script>
+  </body>
+</html>

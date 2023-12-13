@@ -1,5 +1,5 @@
 const input = document.getElementById("input");
-const inputParent = input.parentElement;
+const inputParent = input.parentElement.parentElement;
 const submit_btn = document.getElementById("submit-btn");
 const todo_div = document.getElementById("todos");
 

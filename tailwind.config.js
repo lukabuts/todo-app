@@ -28,7 +28,7 @@ module.exports = {
       width: {
         icon: "24px",
         container: "430px",
-        btn: "88px",
+        btn: "80px",
       },
       // Max Width
       maxWidth: {
@@ -58,7 +58,7 @@ module.exports = {
       },
       // Screens
       screens: {
-        sm: "400px",
+        sm: "410px",
       },
     },
   },

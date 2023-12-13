@@ -546,9 +546,9 @@ video {
   width: 100%;
 }
 
-@media (min-width: 400px){
+@media (min-width: 410px){
   .container{
-    max-width: 400px;
+    max-width: 410px;
   }
 }
 
@@ -600,6 +600,10 @@ video {
   height: 7px;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .h-icon{
   height: 24px;
 }
@@ -617,7 +621,7 @@ video {
 }
 
 .w-btn{
-  width: 88px;
+  width: 80px;
 }
 
 .w-icon{
@@ -821,51 +825,24 @@ video {
   }
 
   .specialInput {
-    width: 70% !important;
     position: absolute;
-    left: 45px;
     animation: emptyInput 0.1s infinite ease-in-out;
   }
 
   @keyframes emptyInput {
     0% {
-      left: 46px;
+      left: 1px;
       transform: rotate(0deg);
     }
 
     50% {
-      left: 44px;
-      transform: rotate(0.5deg);
+      left: -1px;
+      transform: rotate(0.3deg);
     }
 
     100% {
-      left: 46px;
+      left: 1px;
       transform: rotate(0deg);
-    }
-  }
-
-  @media not all and (min-width: 640px) {
-    .specialInput {
-      left: 5px;
-      width: 100% !important;
-      animation: emptyInputsmall 0.1s infinite ease-in-out;
-    }
-
-    @keyframes emptyInputsmall {
-      0% {
-        left: 6px;
-        transform: rotate(0deg);
-      }
-
-      50% {
-        left: 4px;
-        transform: rotate(0.3deg);
-      }
-
-      100% {
-        left: 6px;
-        transform: rotate(0deg);
-      }
     }
   }
 }
@@ -885,7 +862,7 @@ video {
   outline-offset: 2px;
 }
 
-@media not all and (min-width: 400px){
+@media not all and (min-width: 410px){
   .max-sm\:m-\[10px\]{
     margin: 10px;
   }

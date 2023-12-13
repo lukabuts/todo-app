@@ -52,7 +52,7 @@ module.exports = {
       gap: {
         main: "24px",
       },
-      // Background Image
+      // ! Background Image
       backgroundImage: {
         flowers: "url(imgs/background.svg)",
       },

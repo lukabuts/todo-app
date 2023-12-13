@@ -131,7 +131,7 @@ function generateTodos() {
         item.done ? `bg-greenish` : `bg-transparent`
       } border-2 border-greenish w-icon h-icon flex items-center justify-center rounded-full done-btn"
       >
-        <img src="imgs/done.svg" />
+        <img src="imgs/done.svg" class="w-[9px] h-[7px]" alt="done"/>
       </div>
     </button>
   </div>

@@ -69,7 +69,7 @@ submit_btn.addEventListener("click", (e) => {
   writtenDay = dayNames[day - 1];
 
   // Months
-  writtenMonth = monthNames[month - 1];
+  writtenMonth = monthNames[month];
 
   //   Push changes into basket
   basket.unshift({

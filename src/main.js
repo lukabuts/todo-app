@@ -6,7 +6,7 @@ const todo_div = document.getElementById("todos");
 let basket = JSON.parse(localStorage.getItem("basket")) || [];
 
 // Daynames
-const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 // MonthNames
 const monthNames = [
   "Jan",
@@ -66,7 +66,6 @@ submit_btn.addEventListener("click", (e) => {
   let writtenDay;
   let writtenMonth;
   //   Days
-  writtenDay = dayNames[day - 1];
 
   // Months
   writtenMonth = monthNames[month];

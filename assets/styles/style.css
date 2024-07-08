@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+:root {
+  --body-bg-clr: #475569;
+  --green-btn-clr: #00bf86;
+  --green-btn-clr-hover: #00835c;
+  --dialog-bg-clr: #000000cc;
+  --secondary-txt-clr: #484848;
+  --error-clr: #ff3333;
+  --edit-btn-clr: #ff5f15;
+  --red-btn-clr: #dc143c;
+  --btn-bg-hover: #f2f2f2;
+  --task-border-clr: #c9c9c9;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+body {
+  background: var(--body-bg-clr);
+  padding: 0 0.5rem;
+}
+
+.container {
+  max-width: 30rem;
+  width: 100%;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* time-container */
+
+.time-container {
+  height: 15rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.time-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.time-container #time {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: #fff;
+  text-align: right;
+}
+
+.time-container #time h4 {
+  font-size: 1.5rem;
+}
+
+.time-container #time h2 {
+  font-size: 2.5rem;
+}
+
+/* tasks-container */
+.tasks-container {
+  padding: 1.5rem;
+}
+
+.no-tasks {
+  color: var(--secondary-txt-clr);
+  font-style: italic;
+  text-align: center;
+}
+
+.green-btn {
+  width: 100%;
+  background: var(--green-btn-clr);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.2s background;
+}
+
+.green-btn:hover {
+  background: var(--green-btn-clr-hover);
+}
+
+/* form-dialog */
+#form-dialog[open] {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--dialog-bg-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  z-index: 999;
+}
+
+#task-form {
+  max-width: 30rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+#task-form > p {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+#task-form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+#task-form > div input {
+  padding: 0.2rem;
+  font-size: 1rem;
+}
+
+#task-form > div input.error {
+  border: 2px solid var(--error-clr);
+}
+
+#task-form > div input.error + span::after {
+  content: "Please, write something";
+  color: var(--error-clr);
+  font-size: 0.9rem;
+}
+/* exit-dialog */
+#exit-dialog {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--red-btn-clr);
+  padding: 0.3rem;
+  border-radius: 50%;
+  transition: 0.2s background;
+}
+
+#exit-dialog svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#exit-dialog:hover {
+  background: var(--btn-bg-hover);
+}
+
+/* tasks */
+#tasks {
+  margin-top: 1.5rem;
+}
+
+#tasks .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid var(--task-border-clr);
+  padding: 1rem 0;
+}
+
+#tasks .task:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+#tasks .task .description label {
+  display: flex;
+  align-items: center;
+}
+
+#tasks .task .description label input[type="checkbox"]:checked + .task-title p {
+  text-decoration: line-through;
+}
+
+#tasks .task .description label input[type="checkbox"] {
+  position: relative;
+  border: 2px solid #000;
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 0.6em 0 0;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  opacity: 0.5;
+}
+
+#tasks .task .description label input[type="checkbox"]:hover {
+  opacity: 1;
+}
+
+#tasks .task .description label input[type="checkbox"]:checked {
+  background-color: #000;
+  opacity: 1;
+}
+
+#tasks .task .description label input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+
+#tasks .task .description .task-time {
+  margin: 0.3rem 0 0 28px;
+}
+
+#tasks .task .description .task-time span {
+  color: var(--secondary-txt-clr);
+}
+#tasks .task .description .task-time span.overdue {
+  color: var(--error-clr);
+}
+
+/* Action Buttons */
+#tasks .task .actions button {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#tasks .task .actions button:first-child {
+  color: var(--red-btn-clr);
+}
+
+#tasks .task .actions button:nth-child(2) {
+  color: var(--edit-btn-clr);
+}
+
+/* Success Message */
+.success-msg-div {
+  display: block;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.success-msg-div > div {
+  background-color: var(--green-btn-clr);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  position: relative;
+  animation: showSuccessMessage 0.3s ease-in-out;
+}
+
+.success-msg-div > div > span {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.success-msg-div > div > .timeout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #fff;
+  animation: timeout 3s linear;
+}
+
+@keyframes timeout {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes showSuccessMessage {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 1.5rem;
+  }
+}
